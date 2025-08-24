@@ -186,5 +186,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Nirmal A J L A**
 - Graduate Student in Machine Learning
-- E
-- LinkedIn: [NirmalANtonyselvaraj](www.linkedin.com/in/nirmal-a-j-l-a-98765a172/)
+- LinkedIn: [NirmalAntonyselvaraj](www.linkedin.com/in/nirmal-a-j-l-a-98765a172/)
