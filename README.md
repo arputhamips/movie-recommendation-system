@@ -184,7 +184,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Author
 
-**Your Name**
+**Nirmal A J L A**
 - Graduate Student in Machine Learning
-- Email: your.email@university.edu
-- LinkedIn: [yourprofile](https://linkedin.com/in/yourprofile)
+- E
+- LinkedIn: [NirmalANtonyselvaraj](www.linkedin.com/in/nirmal-a-j-l-a-98765a172/)
