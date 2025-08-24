@@ -1,0 +1,75 @@
+# Configuration file for Movie Recommendation System
+
+# Data settings
+data:
+  raw_data_path: "data/raw/ml-100k"
+  processed_data_path: "data/processed"
+  min_ratings: 20
+  test_size: 0.2
+  random_state: 42
+
+# Model hyperparameters
+collaborative_filtering:
+  user_based:
+    k_neighbors: 50
+    min_common: 5
+    similarity_metric: "cosine"
+  item_based:
+    k_neighbors: 50
+    min_common: 5
+    similarity_metric: "cosine"
+
+matrix_factorization:
+  svd:
+    n_factors: 50
+    n_iter: 20
+    random_state: 42
+  nmf:
+    n_factors: 50
+    max_iter: 200
+    random_state: 42
+
+content_based:
+  max_features: 1000
+  ngram_range: [1, 2]
+  stop_words: "english"
+
+hybrid:
+  cf_weight: 0.7
+  cb_weight: 0.3
+  method: "weighted"  # weighted, switching, or mixed
+
+# Training settings
+training:
+  batch_size: 256
+  learning_rate: 0.001
+  epochs: 50
+  early_stopping_patience: 10
+  validation_split: 0.1
+
+# Evaluation settings
+evaluation:
+  k_values: [5, 10, 20]
+  metrics: ["rmse", "mae", "precision", "recall", "f1", "coverage", "diversity", "novelty"]
+  cross_validation_folds: 5
+
+# Logging settings
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/recommender.log"
+
+# API settings (for deployment)
+api:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+  max_recommendations: 100
+  cache_timeout: 3600  # seconds
+
+# Database settings (optional)
+database:
+  type: "sqlite"
+  path: "data/recommendations.db"
+  pool_size: 10
+  echo: false
